@@ -57,6 +57,13 @@ header .container a{
     font-weight: bold;
 }
 
+/*Empieza class seccion*/
+
+.seccion{
+    padding: 60px 0px;
+    background-color: blue;
+}
+
 .container{
     width: 1140px;
     margin: 0 auto;
@@ -95,4 +102,16 @@ elemento padre debe de contener al menos una de los 2 */
 #inicio .bloque-inicio p{
     color: white;
     font-size: 16px;
+}
+
+#nosotros {
+    background-image: url(../img/latas.jpg);
+    background-size: cover;
+}
+
+#nosotros p{
+    color: white;
+    align-items: center;
+    font-size: 16px;
+    margin: 0;
 }
