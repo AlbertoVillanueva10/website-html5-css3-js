@@ -12,6 +12,7 @@ body{
 /*Si queremos en un momento darles un alto a los elementos a*/
 a{
     display: inline-block;
+    text-decoration: none;
 }
 
 p{
@@ -37,11 +38,67 @@ header .container{
     align-items: center;
 }
 
-header .container a{
+header .container .logo{
+    width: 100px;
+}
+
+header .container nav a{
     color: red;
     text-decoration: none;
     margin: 0 15px;
 }
+
+header .container .hamb{
+    display: none;
+}
+
+footer.seccion{
+    background-color: black;
+    color: white;
+    padding-bottom: 0;
+}
+
+footer .barra-footer{
+    background-color: grey;
+    text-align: center;
+    padding: 20px 15px;
+}
+
+footer .logo-footer{
+    width: 100%;
+}
+
+
+footer ul{
+    padding-left: 0;
+    list-style: none;
+    margin: 0;
+}
+
+footer ul li{
+    margin-bottom: 10px;
+}
+
+footer p{
+    color:white;
+    margin-bottom: 30px;
+}
+
+footer a{
+    color: white;
+}
+
+footer .redes{
+    font-size: 30px;
+    display: flex;
+    /* justify-content: space-around; */
+
+}
+
+footer .redes a{
+    margin: 0  7.5px;
+}
+
 
 .boton{
     text-align: center;
@@ -130,6 +187,10 @@ header .container a{
     padding: 0px 15px;
 }
 
+.columna-25{
+    width: 25%;
+}
+
 .columna-33{
     width: 33.3%;
 }
@@ -142,13 +203,14 @@ header .container a{
     margin-left: 50%;
 }
 
-.empujar-0{
+.empujar-mobile-0{
     margin-left: 0;
 }
 
-header .container .logo{
-    width: 100px;
+.sinpadding-mobile{
+    padding: 0;
 }
+
 /* Para que un elemento ocupe el espacio relative o absolute
 elemento padre debe de contener al menos una de los 2 */
 #inicio{
@@ -286,4 +348,89 @@ elemento padre debe de contener al menos una de los 2 */
 
 #contactenos form .form-block.bloque-ultimo{
     margin-bottom: 0;
+}
+
+/* HASTA 767 */
+@media(max-width: 767px){
+
+    body{
+        font-size: 15px;
+    }
+
+    header .container nav {
+        position:fixed;
+        width: 100%;
+        height: 100%;
+        background-color: white;
+        padding: 80px 15px;
+        top: 0;
+        left: 0;
+        display: flex;
+        flex-direction: column;
+        /* cualquier propiedad que se modifique */
+        transition: all 0.4s ease;
+        transform: translateX(100%);
+    }
+
+    header .container nav a{
+        font-size: 30px;
+        margin: 15px 0;
+    }
+
+    header .container .hamb{
+        display: block;
+        font-size: 40px;
+        color: red;
+    }
+
+    form .boton.boton-negro {
+        width: 100%;
+    }
+
+    footer{
+        text-align: center;
+    }
+
+    footer .logo-footer{
+        width: 50%;
+    }
+
+    footer .redes{
+        justify-content: center;
+    }
+    .container{
+        width: 100%;
+    }
+
+    .columna-mobile-100{
+        width: 100%;
+    }
+
+    .columna-mobile-50{
+        width: 50%;
+    }
+
+    #inicio{
+        height: 100vh;
+    }
+
+    #inicio img{
+        height: 100%;
+        object-fit: cover;
+        object-position: center;
+    }
+
+    #servicios .bloque-servicio{
+        margin-bottom: 15px;
+    }
+
+    #contactenos{
+        padding: 0;
+    }
+
+    #contactenos iframe{
+        position: relative;
+        height: 50vh;
+
+    }
 }
