@@ -50,6 +50,7 @@ header .container nav a{
 
 header .container .hamb{
     display: none;
+    position: relative;
 }
 
 footer.seccion{
@@ -369,7 +370,12 @@ elemento padre debe de contener al menos una de los 2 */
         flex-direction: column;
         /* cualquier propiedad que se modifique */
         transition: all 0.4s ease;
+        /* moverte el espacio que necesitas con el translate */
         transform: translateX(100%);
+    }
+
+    header .container nav.open{
+        transform: translateX(0);
     }
 
     header .container nav a{
