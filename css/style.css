@@ -226,8 +226,8 @@ elemento padre debe de contener al menos una de los 2 */
 /* Centrando el elemento, solo margina acepta valores negativos*/
 #inicio .bloque-inicio{
     position: absolute;
-    top: 50%;
-    left: 40%;
+    top: 40%;
+    left: 50%;
     width: 400px;
     text-align: center;
     margin-left: -200px;
